@@ -8,6 +8,7 @@ function Input({ item, setItem, handleAdd }) {
           setItem(e.target.value);
         }}
         placeholder='Enter a task'
+        maxLength='25'
       ></input>
       <button
         className='border rounded-2xl ml-5 py-4 px-6 hover:bg-white hover:text-purple-600 transform active:scale-90 transition-transform'

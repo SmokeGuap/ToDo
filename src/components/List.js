@@ -1,7 +1,12 @@
+import { useState } from 'react';
+
 function List({ items, handleDelete }) {
   const handleEdit = (item) => {
+    const li = document.querySelector(`li[id='${item}']`);
     const edit = document.querySelector(`form[id='${item}']`);
+    const input = edit.querySelector('input');
     edit.classList.remove('hidden');
+    input.value = li.innerHTML;
   };
 
   const handleChanges = (e) => {
@@ -28,12 +33,15 @@ function List({ items, handleDelete }) {
                 onSubmit={handleChanges}
                 className='hidden w-full absolute z-10 top-2 flex justify-between bg-white rounded-2xl text-purple-600'
               >
-                <input className='cursor-pointer outline-none w-full py-2 px-6 rounded-2xl'></input>
+                <input
+                  maxLength='25'
+                  className='cursor-pointer outline-none w-full py-2 px-6 rounded-2xl'
+                ></input>
                 <button className='rounded-2xl ml-5 px-6 hover:bg-white py-2 hover:text-purple-600 transform active:scale-90 transition-transform'>
                   Edit
                 </button>
               </form>
-              <div>
+              <div className='flex'>
                 <button
                   className='border rounded-lg px-6 hover:bg-white hover:text-purple-600 transform active:scale-90 transition-transform'
                   onClick={() => handleEdit(item)}

@@ -26,9 +26,9 @@ function App() {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-purple-200 via-purple-400 to-purple-800 text-white'>
+    <div className='sm:bg-green min-h-screen bg-gradient-to-br from-purple-200 via-purple-400 to-purple-800 text-white'>
       <div className='flex flex-col justify-center items-center h-screen'>
-        <div className='w-1/4'>
+        <div className='w-vh'>
           <div className='transform transition duration-500 hover:scale-125'>
             <h2 className='text-6xl text-center mb-10'>ToDo List</h2>
           </div>
