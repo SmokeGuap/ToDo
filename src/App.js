@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className='sm:bg-green min-h-screen bg-gradient-to-br from-purple-200 via-purple-400 to-purple-800 text-white'>
+    <div className='min-h-screen bg-gradient-to-br from-purple-200 via-purple-400 to-purple-800 text-white'>
       <div className='flex flex-col justify-center items-center h-screen'>
         <div className='w-vh'>
           <div className='transform transition duration-500 hover:scale-125'>
